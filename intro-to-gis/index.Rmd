@@ -1,0 +1,109 @@
+---
+title: "Introduction to GIS"
+subtitle: ""
+date: "August 24, 2021"
+author: "GEOG 30313"
+output: 
+  xaringan::moon_reader: 
+    seal: yes
+  
+---
+
+## How do you "do" geography? 
+
+<center><img src=assets/img/my-dialect.JPG style="width: 750px;" /></center>
+
+Exercise link: https://www.nytimes.com/interactive/2014/upshot/dialect-quiz-map.html
+
+---
+
+## GISystems vs. GIScience  
+
+* Geographic Information Systems (textbook definition): "a computer-based system to aid in the collection, maintenance, storage, analysis, output, and distribution of spatial data and information" 
+  * In simpler terms: a system that allows you to **manage** and **analyze** spatial data
+
+* Geographic Information Science: 
+  * The scientific study of geographic information
+  * The application of geospatial technology to scientific inquiry
+  
+* Both are a core focus of this course
+
+---
+
+## University planning
+
+<center><img src=assets/img/huff.PNG style="width: 600px;" /></center>
+
+<span class = "footnote">Image credit: Tiffany Huff, TCU '15</span>
+
+---
+
+## Humanitarian analysis
+
+<center><img src=assets/img/martin.jpg style="width: 650px;" /></center>
+
+<span class = "footnote">Image credit: Nick Martin, TCU '18</span>
+
+---
+
+## Urban planning and development
+
+<center><img src=assets/img/lopez.jpg style="width: 600px;" /></center>
+
+<span class = "footnote">Image credit: Stephen Lopez, TCU '14</span>
+
+---
+
+## Urban & non-profit analytics
+
+<center><img src=assets/img/nissen.PNG style="width: 600px;" /></center>
+
+<span class = "footnote">Image credit: Katie Nissen, TCU '20</span>
+
+---
+
+## Urban inequality
+
+<img src=assets/img/craig.jpg style="width: 600px">
+
+<span class="footnote">Image credit: Ben Craig, TCU '16</span>
+
+---
+
+## Social history
+
+<center><img src=assets/img/boughton.jpg style="width: 335px;" /></center>
+
+<span class = "footnote">Image credit: Marty Boughton, TCU '16</span>
+
+---
+
+## Our GIS program
+
+<img src=assets/img/diagram.png>
+
+---
+
+## TCU Center for Urban Studies
+
+* Example project: [Educational Attainment in America](http://personal.tcu.edu/kylewalker/maps/education/)
+* Work on projects like this!
+
+
+<style>
+
+h1, h2, h3 {
+  color:  #4d1979; 
+}
+
+a {
+  color: #8C489F; 
+}
+
+.inverse {
+  background-color:  #4d1979; 
+
+}
+</style>
+
+
