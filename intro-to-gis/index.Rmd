@@ -11,7 +11,7 @@ output:
 
 ## How do you "do" geography? 
 
-<center><img src=assets/img/my-dialect.JPG style="width: 750px;" /></center>
+<center><img src=assets/img/my-dialect.JPG style="width: 500px;" /></center>
 
 Exercise link: https://www.nytimes.com/interactive/2014/upshot/dialect-quiz-map.html
 
