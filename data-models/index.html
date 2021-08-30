@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>GIS data models</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="GEOG 30313" />
+    <meta name="date" content="2021-08-31" />
+    <script src="index_files/header-attrs-2.10.5/header-attrs.js"></script>
+    <link href="index_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="index_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# GIS data models
+### GEOG 30313
+### August 31, 2021
+
+---
+
+
+## Components of a GIS
+
+* Hardware
+
+* Software
+
+* Data
+
+* Users
+
+---
+
+## GIS software
+
+* Desktop GIS: ArcGIS for Desktop, [QGIS](http://qgis.org/en/site/), [MapInfo](http://www.mapinfo.com/)
+
+* Web GIS: [ArcGIS Online](http://www.arcgis.com/features/), [Mapbox](https://www.mapbox.com/), [CARTO](http://carto.com/)
+
+* Other applications:
+* Database (e.g. [PostgreSQL/PostGIS](http://postgis.net/)), statistical software (e.g. [R](http://www.r-project.org/)), programming languages (e.g. [Python](https://github.com/SpatialPython/spatial_python))
+
+---
+
+## Data
+
+* The **information** component of GIS
+* Example: Texas county data in Excel spreadsheet
+
+&lt;img src=assets/img/data.png style="width: 750px"&gt;
+
+---
+
+## **Geographic** data
+
+* Geographic data includes **reference to position on Earth's surface**
+
+* Example: Tarrant County
+
+---
+
+## Geographic data
+
+&lt;img src=assets/img/tarrant.png style="width: 700px"&gt;
+
+---
+
+## GIS data displayed as **layers**
+
+&lt;img src=assets/img/layers.png style="width: 400px"&gt;
+
+&lt;span class="footnote"&gt;Image source: Wexford County, MI&lt;/span&gt;
+
+---
+
+## Data models: abstraction of reality
+
+&lt;img src=assets/img/data-models.png style="width: 850px"&gt;
+
+&lt;span class="footnote"&gt;Image source: Bolstad, _GIS Fundamentals_&lt;/span&gt;
+
+
+---
+
+## Types of GIS data
+
+* Vector data: used to represent discrete geographic features
+ * Examples: cities, lakes, roads
+ 
+* Raster data: used to represent continuous geographic phenomena
+ * Examples: imagery, elevation, temperature
+
+---
+
+## Vector data
+
+* **Coordinate pairs** form **points, lines, and polygons**
+
+&lt;img src=assets/img/vector.png style="width: 800px"&gt;
+
+---
+
+## Points: Large cities in Texas
+
+&lt;img src=assets/img/points.png style="width: 600px"&gt;
+
+---
+
+## Lines: Interstate highways
+
+&lt;img src=assets/img/lines.png style="width: 600px"&gt;
+
+---
+
+## Polygons: Counties
+
+&lt;img src=assets/img/polygons.png style="width: 600px"&gt;
+
+---
+
+## Vector data
+
+&lt;img src=assets/img/vector2.png style="width: 500px"&gt;
+
+---
+
+## Vector data: **features** and **attributes**
+
+&lt;img src=assets/img/features.png style="width: 800px"&gt;
+
+---
+
+## Vector data in ArcGIS: the Shapefile
+
+* Simple vector data format (spaghetti)
+
+* Fast to display, readable by most GIs packages
+
+* Composed of several related files
+ * Required: **.shp** (feature geometry), **.dbf** (attributes), **.shx** (index file)
+ * Optional, but recommended: **.prj** (coordinate system information), **.sbn** and **.sbx** (spatial index files), **.shp.xml** (metadata)
+
+---
+
+## Multipart features
+
+* Linear and polygon features can sometimes have multiple parts (e.g. Florida)
+
+&lt;img src=assets/img/florida.png style="width: 800px"&gt;
+
+---
+
+## Polygon inclusion - what belongs?
+
+&lt;img src=assets/img/keywest.png style="width: 800px"&gt;
+
+---
+
+## Point, line, polygon: which to choose?
+
+&lt;img src=assets/img/pointlinepoly.png style="width: 450px"&gt;
+
+---
+
+## Topology and vector data
+
+* Topology: rules governing **adjacency** and **connectivity** between geographic features
+
+&lt;img src=assets/img/topology.png style="width: 800px"&gt;
+
+---
+
+## Topological rules
+
+&lt;img src=assets/img/topology-rules.png style="width: 500px"&gt;
+
+---
+
+## Vector data in ArcGIS: the geodatabase
+
+* Geodatabase: native data storage format for ArcGIS
+
+* Stores vector data as tables; can also store relationships between tables, raster datasets, etc. 
+
+* Formats:
+ * File geodatabase: collection of datasets held in a file system folder 
+ * Personal geodatabase: geographic data stored as a Microsoft Access database
+ * ArcSDE (enterprise) geodatabase: collection of datasets stored in a relational database (for use on a network)
+
+---
+
+## The Esri Geodatabase
+
+&lt;img src=assets/img/geodatabase.png style="width: 750px"&gt;
+
+---
+
+## Raster data
+
+* Grid of cells that form a continuous surface
+
+* Each grid cell contains a value that represents some real-world phenomena (e.g. elevation, land use)
+
+&lt;img src=assets/img/raster.png style="width: 750px"&gt;
+
+---
+
+## **Quantitative** and **qualitative** rasters
+
+&lt;img src=assets/img/qualquant.png style="width: 850px"&gt;
+
+---
+
+## Raster data resolution
+
+* **Cell dimension**: the size of each grid cell (e.g. 30 meters by 30 meters)
+
+* **Resolution**: the relative size of the grid cell
+
+&lt;img src=assets/img/resolution.png style="width: 850px"&gt;
+
+---
+
+## Raster data classification
+
+&lt;img src=assets/img/class.png style="width: 850px"&gt;
+
+---
+
+## Raster data storage
+
+* High-resolution raster datasets can contain millions of cells. and can get very large!
+* Compression solutions: run-length encoding, quad tree representation
+
+&lt;img src=assets/img/compress.png style="width: 800px"&gt;
+
+---
+
+## Raster vs. vector
+
+* What might be some advantages or disadvantages of each model?  
+
+---
+
+## Raster vs. vector
+
+### Advantages of raster data: 
+* Simpler data structure
+* Straightforward data analysis (especially for continuous phenomena)
+* Best for representing imagery
+
+### Advantages of vector data:
+* Smaller file sizes
+* Easy to re-project
+* Good for some types of analysis (e.g. network analysis)
+* Easy for map readers to understand
+
+---
+
+## Vector/raster conversion
+
+&lt;img src=assets/img/convert.png style="width: 650px"&gt;
+
+---
+
+## Does it make sense to convert?
+
+* Example: counties in Texas
+
+&lt;img src=assets/img/texas.png style="width: 850px"&gt;
+
+---
+
+## Texas counties as a raster
+
+&lt;img src=assets/img/tx-raster.png style="width: 800px"&gt;
+
+
+&lt;style&gt;
+
+h1, h2, h3 {
+  color:  #4d1979; 
+}
+
+a {
+  color: #8C489F; 
+}
+
+.inverse {
+  background-color:  #4d1979; 
+
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

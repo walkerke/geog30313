@@ -1,0 +1,301 @@
+---
+title: "GIS data models"
+subtitle: ""
+date: "August 31, 2021"
+author: "GEOG 30313"
+output: 
+  xaringan::moon_reader: 
+    seal: yes
+  
+---
+
+## Components of a GIS
+
+* Hardware
+
+* Software
+
+* Data
+
+* Users
+
+---
+
+## GIS software
+
+* Desktop GIS: ArcGIS for Desktop, [QGIS](http://qgis.org/en/site/), [MapInfo](http://www.mapinfo.com/)
+
+* Web GIS: [ArcGIS Online](http://www.arcgis.com/features/), [Mapbox](https://www.mapbox.com/), [CARTO](http://carto.com/)
+
+* Other applications:
+* Database (e.g. [PostgreSQL/PostGIS](http://postgis.net/)), statistical software (e.g. [R](http://www.r-project.org/)), programming languages (e.g. [Python](https://github.com/SpatialPython/spatial_python))
+
+---
+
+## Data
+
+* The **information** component of GIS
+* Example: Texas county data in Excel spreadsheet
+
+<img src=assets/img/data.png style="width: 750px">
+
+---
+
+## **Geographic** data
+
+* Geographic data includes **reference to position on Earth's surface**
+
+* Example: Tarrant County
+
+---
+
+## Geographic data
+
+<img src=assets/img/tarrant.png style="width: 700px">
+
+---
+
+## GIS data displayed as **layers**
+
+<img src=assets/img/layers.png style="width: 400px">
+
+<span class="footnote">Image source: Wexford County, MI</span>
+
+---
+
+## Data models: abstraction of reality
+
+<img src=assets/img/data-models.png style="width: 850px">
+
+<span class="footnote">Image source: Bolstad, _GIS Fundamentals_</span>
+
+
+---
+
+## Types of GIS data
+
+* Vector data: used to represent discrete geographic features
+ * Examples: cities, lakes, roads
+ 
+* Raster data: used to represent continuous geographic phenomena
+ * Examples: imagery, elevation, temperature
+
+---
+
+## Vector data
+
+* **Coordinate pairs** form **points, lines, and polygons**
+
+<img src=assets/img/vector.png style="width: 800px">
+
+---
+
+## Points: Large cities in Texas
+
+<img src=assets/img/points.png style="width: 600px">
+
+---
+
+## Lines: Interstate highways
+
+<img src=assets/img/lines.png style="width: 600px">
+
+---
+
+## Polygons: Counties
+
+<img src=assets/img/polygons.png style="width: 600px">
+
+---
+
+## Vector data
+
+<img src=assets/img/vector2.png style="width: 500px">
+
+---
+
+## Vector data: **features** and **attributes**
+
+<img src=assets/img/features.png style="width: 800px">
+
+---
+
+## Vector data in ArcGIS: the Shapefile
+
+* Simple vector data format (spaghetti)
+
+* Fast to display, readable by most GIs packages
+
+* Composed of several related files
+ * Required: **.shp** (feature geometry), **.dbf** (attributes), **.shx** (index file)
+ * Optional, but recommended: **.prj** (coordinate system information), **.sbn** and **.sbx** (spatial index files), **.shp.xml** (metadata)
+
+---
+
+## Multipart features
+
+* Linear and polygon features can sometimes have multiple parts (e.g. Florida)
+
+<img src=assets/img/florida.png style="width: 800px">
+
+---
+
+## Polygon inclusion - what belongs?
+
+<img src=assets/img/keywest.png style="width: 800px">
+
+---
+
+## Point, line, polygon: which to choose?
+
+<img src=assets/img/pointlinepoly.png style="width: 450px">
+
+---
+
+## Topology and vector data
+
+* Topology: rules governing **adjacency** and **connectivity** between geographic features
+
+<img src=assets/img/topology.png style="width: 800px">
+
+---
+
+## Topological rules
+
+<img src=assets/img/topology-rules.png style="width: 500px">
+
+---
+
+## Vector data in ArcGIS: the geodatabase
+
+* Geodatabase: native data storage format for ArcGIS
+
+* Stores vector data as tables; can also store relationships between tables, raster datasets, etc. 
+
+* Formats:
+ * File geodatabase: collection of datasets held in a file system folder 
+ * Personal geodatabase: geographic data stored as a Microsoft Access database
+ * ArcSDE (enterprise) geodatabase: collection of datasets stored in a relational database (for use on a network)
+
+---
+
+## The Esri Geodatabase
+
+<img src=assets/img/geodatabase.png style="width: 750px">
+
+---
+
+## Raster data
+
+* Grid of cells that form a continuous surface
+
+* Each grid cell contains a value that represents some real-world phenomena (e.g. elevation, land use)
+
+<img src=assets/img/raster.png style="width: 750px">
+
+---
+
+## **Quantitative** and **qualitative** rasters
+
+<img src=assets/img/qualquant.png style="width: 850px">
+
+---
+
+## Raster data resolution
+
+* **Cell dimension**: the size of each grid cell (e.g. 30 meters by 30 meters)
+
+* **Resolution**: the relative size of the grid cell
+
+<img src=assets/img/resolution.png style="width: 850px">
+
+---
+
+## Raster data classification
+
+<img src=assets/img/class.png style="width: 850px">
+
+---
+
+## Raster data storage
+
+* High-resolution raster datasets can contain millions of cells. and can get very large!
+* Compression solutions: run-length encoding, quad tree representation
+
+<img src=assets/img/compress.png style="width: 800px">
+
+---
+
+## Raster vs. vector
+
+* What might be some advantages or disadvantages of each model?  
+
+---
+
+## Raster vs. vector
+
+### Advantages of raster data: 
+* Simpler data structure
+* Straightforward data analysis (especially for continuous phenomena)
+* Best for representing imagery
+
+### Advantages of vector data:
+* Smaller file sizes
+* Easy to re-project
+* Good for some types of analysis (e.g. network analysis)
+* Easy for map readers to understand
+
+---
+
+## Vector/raster conversion
+
+<img src=assets/img/convert.png style="width: 650px">
+
+---
+
+## Does it make sense to convert?
+
+* Example: counties in Texas
+
+<img src=assets/img/texas.png style="width: 850px">
+
+---
+
+## Texas counties as a raster
+
+<img src=assets/img/tx-raster.png style="width: 800px">
+
+
+<style>
+
+h1, h2, h3 {
+  color:  #4d1979; 
+}
+
+a {
+  color: #8C489F; 
+}
+
+.inverse {
+  background-color:  #4d1979; 
+
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
