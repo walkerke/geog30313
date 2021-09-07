@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Attributes, tables, and queries</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="GEOG 30313" />
+    <meta name="date" content="2021-09-07" />
+    <script src="index_files/header-attrs-2.10.5/header-attrs.js"></script>
+    <link href="index_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="index_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Attributes, tables, and queries
+### GEOG 30313
+### September 7, 2021
+
+---
+
+
+## Attribute data
+
+* Attribute information in a GIS: what are we mapping?
+
+* Types of attributes:
+  + Nominal
+  + Ordinal
+  + Interval
+  + Ratio
+  
+
+---
+
+## Nominal
+
+* Nominal attributes are __descriptive__
+* As nominal data are __qualitative__, there is no inherent ranking or order to their values
+* Example: electoral map
+
+&lt;img src=assets/img/electoral.png style="width: 450px"&gt;
+
+&lt;span class="footnote"&gt;Source: http://www-personal.umich.edu/~mejn/election/2008/&lt;/span&gt;
+
+---
+
+## Ordinal
+
+* Ordinal attributes convey __ranking__
+* Ordinal data do not say anything about relationships between ranks -- just their order
+* Example: ranked clergy compensation
+
+&lt;img src=assets/img/clergy.png style="width: 400px"&gt;
+
+&lt;span class="footnote"&gt;Source: http://www.cpg.org/research&lt;/span&gt;
+
+---
+
+## Interval
+
+* Interval data: quantitative, but __no natural zero__
+* Scale might be __additive__, but not __multiplicative__
+* Example: temperature (from Natural Weather Service)
+
+&lt;img src=assets/img/temp.png style="width: 450px"&gt;
+
+---
+
+## Ratio
+
+* Ratio data: __quantitative__ with a __true zero__
+* As such, multiplication makes sense ($12 is three times more than $4)
+* Example: Income in Dallas/Fort Worth (source: [radicalcartography.net](http://www.radicalcartography.net/index.html?cityincome))
+
+&lt;img src=assets/img/income.png style="width: 800px"&gt;
+
+---
+
+## Databases
+
+* __Database__: organized collection of data (e.g., your table)
+* __Database management system (DBMS)__: program that facilitates database storage, access, analysis, and manipulation
+
+* GIS data storage based on DBMS principles
+
+---
+
+## Flat files
+
+* Rows of information stored as text or binary files
+* Examples: comma-delimited (.csv) files, spreadsheets
+
+&lt;img src=assets/img/flat.png style="width: 800px"&gt;
+
+---
+
+## Relational databases
+
+* Multiple tables that can be associated with one another based on common fields
+* Relations determined by user; not set beforehand
+* Relationships defined based on __relational algebra__
+
+&lt;img src=assets/img/relational.png style="width: 500px"&gt;
+
+---
+
+## Attribute data in a GIS: the __table__
+
+&lt;img src=assets/img/table.png style="width: 800px"&gt;
+
+---
+
+## Rows and columns
+
+&lt;img src=assets/img/rowcol.png style="width: 750px"&gt;
+
+---
+
+## Field types
+
+* Numeric
+  + Integers (short or long)
+  + Floating-point numbers (float or double)
+  + __Precision__: length of numeric field
+  + __Scale__: number of decimal places in numeric field
+* Text (string)
+* Dates
+* Binary Large Objects (BLOBs)
+
+Field values restricted based on their __domain__
+
+---
+
+## Attribute types
+
+&lt;img src=assets/img/types.png style="width: 830px"&gt;
+
+---
+
+## Joining and relating tables in a GIS
+
+* In a GIS, tables can be associated with each other through __joins__ or __relates__
+
+* __Join__: attributes from __target table__ merged to a __source table__
+
+* __Relate__: attributes from target table associated with source table; not merged in
+
+* Joins and relates based upon a __key field__
+
+---
+
+## Understanding "key fields"
+
+&lt;img src=assets/img/keys.png style="width: 830px"&gt;
+
+---
+
+## Joins
+
+&lt;img src=assets/img/joins.png style="width: 650px"&gt;
+
+---
+
+## Types of joins
+
+* Inner join: __only the matching rows__ are retained
+
+* Outer join: __all rows are retained__, regardless of the presence or absence of a match between source and target tables 
+
+* Left (outer) join: __all rows in the source table__ are retained
+
+---
+
+## Inner vs. outer joins
+
+&lt;img src=assets/img/innerouter.png style="width: 800px"&gt;
+
+---
+
+## Cardinality
+
+The directionality of the join or relate is important!
+
+* __One-to-one (1:1)__: one record in source table for each record in target table
+
+* __Many-to-one (m:1)__: multiple records in source table for each record in target table
+
+* __One-to-many (1:m)__: one record in source table corresponds to multiple records in target table
+
+* __Many-to-many (m:m)__: multiple corresponding records in both source and target tables
+
+---
+
+## Joins and relates in ArcGIS
+
+* 1:1 and m:1 relationships handled through __joins__
+
+* 1:m and m:m relationships handled through __relates__
+
+* Key fields need not have the same name; however, __they must be the same field type__
+
+---
+
+## Example: inner join
+
+&lt;img src=assets/img/inner.png style="width: 850px"&gt;
+
+---
+
+## Example: inner join
+
+&lt;img src=assets/img/inner2.png style="width: 850px"&gt;
+
+---
+
+## Example: Left (outer) join
+
+&lt;img src=assets/img/left.png style="width: 800px"&gt;
+
+---
+
+## Queries
+
+* Records can be accessed within databases through the use of __queries__
+
+* Queries commonly used to subset data based on a given set of desired attribute values
+
+---
+
+## Select by Attributes
+
+* Tool in ArcGIS Pro for subsetting data based on query expression
+
+* Options: __Clause mode__ and __SQL mode__
+
+---
+
+## Clause mode
+
+&lt;img src=assets/img/clause.PNG style="width: 800px"&gt;
+
+---
+
+## __S__tructured __Q__uery __L__anguage (SQL)
+
+* Common language for querying databases
+
+Example SQL statement: 
+```sql
+SELECT * FROM Texas_counties WHERE "Total" &gt; 500000
+```
+* Partial version can be used in ArcGIS to select and subset data
+
+---
+
+## SQL mode
+
+&lt;img src=assets/img/sql.PNG style="width: 800px"&gt;
+
+
+&lt;style&gt;
+
+h1, h2, h3 {
+  color:  #4d1979; 
+}
+
+a {
+  color: #8C489F; 
+}
+
+.inverse {
+  background-color:  #4d1979; 
+
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

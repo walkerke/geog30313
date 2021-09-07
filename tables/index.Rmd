@@ -1,0 +1,293 @@
+---
+title: "Attributes, tables, and queries"
+subtitle: ""
+date: "September 7, 2021"
+author: "GEOG 30313"
+output: 
+  xaringan::moon_reader: 
+    seal: yes
+  
+---
+
+## Attribute data
+
+* Attribute information in a GIS: what are we mapping?
+
+* Types of attributes:
+  + Nominal
+  + Ordinal
+  + Interval
+  + Ratio
+  
+
+---
+
+## Nominal
+
+* Nominal attributes are __descriptive__
+* As nominal data are __qualitative__, there is no inherent ranking or order to their values
+* Example: electoral map
+
+<img src=assets/img/electoral.png style="width: 450px">
+
+<span class="footnote">Source: http://www-personal.umich.edu/~mejn/election/2008/</span>
+
+---
+
+## Ordinal
+
+* Ordinal attributes convey __ranking__
+* Ordinal data do not say anything about relationships between ranks -- just their order
+* Example: ranked clergy compensation
+
+<img src=assets/img/clergy.png style="width: 400px">
+
+<span class="footnote">Source: http://www.cpg.org/research</span>
+
+---
+
+## Interval
+
+* Interval data: quantitative, but __no natural zero__
+* Scale might be __additive__, but not __multiplicative__
+* Example: temperature (from Natural Weather Service)
+
+<img src=assets/img/temp.png style="width: 450px">
+
+---
+
+## Ratio
+
+* Ratio data: __quantitative__ with a __true zero__
+* As such, multiplication makes sense ($12 is three times more than $4)
+* Example: Income in Dallas/Fort Worth (source: [radicalcartography.net](http://www.radicalcartography.net/index.html?cityincome))
+
+<img src=assets/img/income.png style="width: 800px">
+
+---
+
+## Databases
+
+* __Database__: organized collection of data (e.g., your table)
+* __Database management system (DBMS)__: program that facilitates database storage, access, analysis, and manipulation
+
+* GIS data storage based on DBMS principles
+
+---
+
+## Flat files
+
+* Rows of information stored as text or binary files
+* Examples: comma-delimited (.csv) files, spreadsheets
+
+<img src=assets/img/flat.png style="width: 800px">
+
+---
+
+## Relational databases
+
+* Multiple tables that can be associated with one another based on common fields
+* Relations determined by user; not set beforehand
+* Relationships defined based on __relational algebra__
+
+<img src=assets/img/relational.png style="width: 500px">
+
+---
+
+## Attribute data in a GIS: the __table__
+
+<img src=assets/img/table.png style="width: 800px">
+
+---
+
+## Rows and columns
+
+<img src=assets/img/rowcol.png style="width: 750px">
+
+---
+
+## Field types
+
+* Numeric
+  + Integers (short or long)
+  + Floating-point numbers (float or double)
+  + __Precision__: length of numeric field
+  + __Scale__: number of decimal places in numeric field
+* Text (string)
+* Dates
+* Binary Large Objects (BLOBs)
+
+Field values restricted based on their __domain__
+
+---
+
+## Attribute types
+
+<img src=assets/img/types.png style="width: 830px">
+
+---
+
+## Joining and relating tables in a GIS
+
+* In a GIS, tables can be associated with each other through __joins__ or __relates__
+
+* __Join__: attributes from __target table__ merged to a __source table__
+
+* __Relate__: attributes from target table associated with source table; not merged in
+
+* Joins and relates based upon a __key field__
+
+---
+
+## Understanding "key fields"
+
+<img src=assets/img/keys.png style="width: 830px">
+
+---
+
+## Joins
+
+<img src=assets/img/joins.png style="width: 650px">
+
+---
+
+## Types of joins
+
+* Inner join: __only the matching rows__ are retained
+
+* Outer join: __all rows are retained__, regardless of the presence or absence of a match between source and target tables 
+
+* Left (outer) join: __all rows in the source table__ are retained
+
+---
+
+## Inner vs. outer joins
+
+<img src=assets/img/innerouter.png style="width: 800px">
+
+---
+
+## Cardinality
+
+The directionality of the join or relate is important!
+
+* __One-to-one (1:1)__: one record in source table for each record in target table
+
+* __Many-to-one (m:1)__: multiple records in source table for each record in target table
+
+* __One-to-many (1:m)__: one record in source table corresponds to multiple records in target table
+
+* __Many-to-many (m:m)__: multiple corresponding records in both source and target tables
+
+---
+
+## Joins and relates in ArcGIS
+
+* 1:1 and m:1 relationships handled through __joins__
+
+* 1:m and m:m relationships handled through __relates__
+
+* Key fields need not have the same name; however, __they must be the same field type__
+
+---
+
+## Example: inner join
+
+<img src=assets/img/inner.png style="width: 850px">
+
+---
+
+## Example: inner join
+
+<img src=assets/img/inner2.png style="width: 850px">
+
+---
+
+## Example: Left (outer) join
+
+<img src=assets/img/left.png style="width: 800px">
+
+---
+
+## Queries
+
+* Records can be accessed within databases through the use of __queries__
+
+* Queries commonly used to subset data based on a given set of desired attribute values
+
+---
+
+## Select by Attributes
+
+* Tool in ArcGIS Pro for subsetting data based on query expression
+
+* Options: __Clause mode__ and __SQL mode__
+
+---
+
+## Clause mode
+
+<img src=assets/img/clause.PNG style="width: 800px">
+
+---
+
+## __S__tructured __Q__uery __L__anguage (SQL)
+
+* Common language for querying databases
+
+Example SQL statement: 
+```sql
+SELECT * FROM Texas_counties WHERE "Total" > 500000
+```
+* Partial version can be used in ArcGIS to select and subset data
+
+---
+
+## SQL mode
+
+<img src=assets/img/sql.PNG style="width: 800px">
+
+
+<style>
+
+h1, h2, h3 {
+  color:  #4d1979; 
+}
+
+a {
+  color: #8C489F; 
+}
+
+.inverse {
+  background-color:  #4d1979; 
+
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
