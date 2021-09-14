@@ -1,0 +1,199 @@
+---
+title: "Introduction to US Census Data"
+subtitle: ""
+date: "September 14, 2021"
+author: "GEOG 30313"
+output: 
+  xaringan::moon_reader: 
+    seal: yes
+  
+---
+
+## What is the US Census?
+
+* __Complete count__ of the United States population that takes place every 10 years
+
+* __Mandated__ by Article 1, Section 2 of the US Constitution; taken since 1790
+
+* Used to guide federal spending; determines proportional representation in US Congress
+
+* __US Census Bureau__: Government agency responsible for conducting the Census; part of the Department of Commerce
+
+* [Census 2020 form](https://www2.census.gov/programs-surveys/decennial/2020/technical-documentation/questionnaires-and-instructions/questionnaires/2020-informational-questionnaire.pdf)
+
+---
+
+## American Community Survey
+
+* Up through 2000: detailed socio-economic characteristics of the US population collected by the Census __long form__
+
+* American Community Survey (ACS): yearly survey of approximately 3 million households; replaces the long form
+
+* [Sample ACS form](https://www2.census.gov/programs-surveys/acs/methodology/questionnaires/2021/quest21.pdf)
+
+---
+
+## Other types of Census surveys
+
+* Economic Census
+
+* Current Population Survey (CPS)
+
+* Many more...
+
+
+---
+
+## Applications of Census data
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FpmZReKhRW8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+
+## Census geography
+
+<img src=assets/img/cgeog.png style = "width: 550px">
+
+<span class="footnote">Source: http://www.census.gov/geo/www/reference.html</span>
+
+---
+
+## Census geography
+
+<img src=assets/img/regions.png style = "width: 600px">
+
+<span class="footnote">Source: http://www.census.gov/geo/www/reference.html</span>
+
+---
+
+## Census geography: the basics
+
+* Census block: smallest enumeration unit for which data is publicly available
+  + Analogous to a city block
+  
+* Census block group: collection of contiguous Census blocks
+  + Approximately 600 to 3000 people
+  
+* Census tract: subdivision of a county; standard unit for Census tabulation
+  + Often used to approximate "neighborhood" boundaries
+  + Contains between 1,200 and 8,000 people; optimal size of 4,000
+
+---
+
+## Census tracts
+
+<img src=assets/img/tracts.jpg style = "width: 400px">
+
+---
+
+## Census block groups
+
+<img src=assets/img/bgs.jpg style = "width: 400px">
+
+---
+
+## Census blocks
+
+<img src=assets/img/blocks.jpg style = "width: 400px">
+
+---
+
+## Census geography and data availability
+
+* Full enumeration data (e.g. Census 2010) available at the block level
+
+* Sample data (ACS) available starting at the block group level
+
+* ACS data availability:
+  + 1-year ACS: geographies of population 65,000 and above
+  + 3-year ACS (discontinued): geographies of population 20,000 and above
+  + 5-year ACS: all geographies for which ACS data are available
+
+
+---
+
+## The ACS and sampling error
+
+* In statistics, we use __samples__ to infer characteristics about a larger __population__
+* Samples are characterized by uncertainty, measured by __sampling error__
+
+* The Census Bureau reports margins of error at a __90 percent confidence level__ with its data products
+
+---
+
+## Longitudinal use of Census data
+
+* Racial categories, 1910: White, Negro, Other
+* Racial categories, 2010: 
+
+  + Ethnicity: Hispanic/Latino or Not Hispanic/Latino
+  + Within each ethnicity: White alone, Black or African American alone, American Indian and Alaska Native alone, Asian alone, Native Hawaiian and Other Pacific Islander alone, Some other race alone, Two or more races, Two races including Some other race, Two races excluding Some other race, and three or more
+
+---
+
+<img src=assets/img/1980.jpg style = "width: 750px">
+
+---
+
+<img src=assets/img/1990.png style = "width: 750px">
+
+---
+
+<img src=assets/img/2000.png style = "width: 750px">
+
+---
+
+<img src=assets/img/2010.png style = "width: 750px">
+
+---
+
+## Census challenges
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xZTD-00H1jE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+
+## Census GIS data: TIGER/Line files
+
+* Geographic data derived from the Census Bureau's __T__opologically __I__ntegrated __G__eographic __E__ncoding and __R__eferencing database
+
+* [Link to data download website](https://www.census.gov/geo/maps-data/data/tiger-line.html)
+
+---
+
+## Census data: data.census.gov
+
+* Portal for accessing and downloading data from the US Census and American Community Survey
+
+* [Link to website](https://data.census.gov/cedsci/)
+
+---
+
+## The National Historical Geographic Information System (NHGIS)
+
+* Tabular Census data and GIS-compatible boundary files going back to the 1790 Census
+
+* [Link to website](http://www.nhgis.org)
+
+<style>
+
+h1, h2, h3 {
+  color:  #4d1979; 
+}
+
+a {
+  color: #8C489F; 
+}
+
+.inverse {
+  background-color:  #4d1979; 
+
+}
+</style>
+
+
+
+
+
+
+
