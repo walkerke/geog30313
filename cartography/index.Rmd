@@ -1,0 +1,278 @@
+---
+title: "Cartographic Principles"
+subtitle: ""
+date: "September 21, 2021"
+author: "GEOG 30313"
+output: 
+  xaringan::moon_reader: 
+    seal: yes
+  
+---
+
+## Cartography and GIS
+
+* Relationships between cartography and GIS - not the same thing!
+
+* _Art_ of cartography vs. _science_ of GIS
+
+* Importance of considering cartographic design principles when doing GIS analysis
+
+---
+
+## Map types
+
+* Reference maps
+
+* Thematic maps
+
+---
+
+## Reference map
+
+<img src=assets/img/ref1.png style="width: 600px" />
+
+<span class="footnote">Source: The National Atlas</span>
+
+---
+
+## Topographic map
+
+<img src=assets/img/ref2.png style="width: 375px" />
+
+<span class="footnote">Source: USGS</span>
+
+
+---
+
+## Choropleth map
+
+<img src=assets/img/texas1.png style="width: 450px" />
+
+<span class="footnote">Source: _Texas Tribune_</span>
+
+
+---
+
+## Graduated/proportional symbol
+
+<img src=assets/img/sudan.png style="width: 650px" />
+
+---
+
+## Isopleth (isarithmic) maps
+
+<img src=assets/img/iso.png style="width: 650px" />
+
+<span class="footnote">Source: University of Illinois</span>
+
+
+---
+
+## Flow maps
+
+<img src=assets/img/facebook.png style="width: 750px" />
+
+<span class="footnote">Source: Facebook</span>
+
+
+---
+
+## Dot-density maps
+
+<img src=assets/img/chicago.jpg style="width: 330px" />
+
+<span class="footnote">Source: Radical Cartography</span>
+
+
+---
+
+## Cartograms
+
+<img src=assets/img/cartogram.png style="width: 675px" />
+
+<span class="footnote">Source: http://www-personal.umich.edu/~mejn/election/2008/</span>
+
+
+---
+
+## 3-D maps
+
+<img src=assets/img/time.png style="width: 750px" />
+
+<span class="footnote">Source: Time Magazine</span>
+
+
+---
+
+## Navigational map
+
+<img src=assets/img/nav.jpg style="width: 700px" />
+
+<span class="footnote">Source: University of Texas at Austin</span>
+
+
+---
+
+## Network map
+
+<img src=assets/img/metro.png style="width: 400px" />
+
+<span class="footnote">Source: Metropolitan Transportation Authority</span>
+
+
+---
+
+## Designing a map: key considerations
+
+* What are you mapping? 
+
+* Who is your audience?
+
+* In what format will you be presenting the map?  
+
+---
+
+## Visual variables in cartography
+
+<img src=assets/img/vis-var.PNG style="width: 500px" />
+
+---
+
+## Color selection
+
+* **Hue**: color, commonly understood (red, blue, green)
+* **Lightness** or **Value**: extent to which color is light or dark
+* **Saturation**: vividness of the color
+
+<img src=assets/img/color1.png style="width: 400px" />
+
+<span class="footnote">Image source: Wikipedia</span>
+
+---
+
+## Color selection
+
+<img src=assets/img/schemes.PNG style="width: 700px" />
+
+<span class="footnote">Source: Brewer, *Designing Better Maps*</span>
+
+
+---
+
+## Color selection
+
+* What does your color choice say to the map reader?  
+
+<img src=assets/img/badmap.jpg style="width: 600px" />
+
+<span class="footnote">Source: Brewer, *Designing Better Maps*</span>
+
+
+---
+
+## Data classification
+
+<img src=assets/img/dataclass.PNG style="width: 650px" />
+
+---
+
+## Data classification
+
+<img src=assets/img/poverty.PNG style="width: 800px" />
+
+---
+
+## Layout and map elements
+
+<img src=assets/img/layout.png style="width: 800px" />
+
+---
+
+## Visual hierarchy of map elements
+
+<img src=assets/img/hierarchy.png style="width: 800px" />
+
+---
+
+## Cartography and the basemap
+
+<img src=assets/img/basemap1.png style="width: 800px" />
+
+<span class="footnote">Source: [Kenneth Field, *Cartonerd*](http://cartonerd.blogspot.com/2014/03/cart-oh-nono-1-blending-choropleths-and.html)</span>
+
+---
+
+## Cartography and the basemap
+
+<img src=assets/img/basemap2.png style="width: 800px" />
+
+<span class="footnote">Source: [Kenneth Field, *Cartonerd*](http://cartonerd.blogspot.com/2014/03/cart-oh-nono-1-blending-choropleths-and.html)</span>
+
+---
+
+## Map export and image resolution
+
+* Raster formats: bitmap (.bmp), Tagged Image File Format (TIFF, .tif), JPEG (.jpg)
+
+* Vector formats: encapsulated PostScript (.eps), Enhanced Metafile (.emf), Adobe Illustrator format (.ai)
+
+* Resolution: dots per inch (dpi)
+
+---
+
+## How to lie with maps
+
+* Given our discussion today (and earlier in the class), how might maps be misleading?  
+
+---
+
+## Maps and power
+
+<img src=assets/img/redlining.jpg style="width: 600px" />
+
+<span class="footnote">Source: Wikipedia</span>
+
+
+---
+
+## Propaganda maps
+
+<img src=assets/img/prop1.jpg style="width: 300px" />
+
+<span class="footnote">Source: flowingdata.com</span>
+
+
+---
+
+## Propaganda maps
+
+<img src=assets/img/prop2.jpg style="width: 500px" />
+
+<span class="footnote">Source: CIA via Ian Muelenhaus, UW-La Crosse</span>
+
+---
+
+
+## Boundary disputes
+
+<img src=assets/img/boundary.png style="width: 650px" />
+
+<span class="footnote">Source: *The Economist*</span>
+
+<style>
+
+h1, h2, h3 {
+  color:  #4d1979; 
+}
+
+a {
+  color: #8C489F; 
+}
+
+.inverse {
+  background-color:  #4d1979; 
+
+}
+</style>
+
+

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Cartographic Principles</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="GEOG 30313" />
+    <meta name="date" content="2021-09-21" />
+    <script src="index_files/header-attrs-2.10.5/header-attrs.js"></script>
+    <link href="index_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="index_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Cartographic Principles
+### GEOG 30313
+### September 21, 2021
+
+---
+
+
+## Cartography and GIS
+
+* Relationships between cartography and GIS - not the same thing!
+
+* _Art_ of cartography vs. _science_ of GIS
+
+* Importance of considering cartographic design principles when doing GIS analysis
+
+---
+
+## Map types
+
+* Reference maps
+
+* Thematic maps
+
+---
+
+## Reference map
+
+&lt;img src=assets/img/ref1.png style="width: 600px" /&gt;
+
+&lt;span class="footnote"&gt;Source: The National Atlas&lt;/span&gt;
+
+---
+
+## Topographic map
+
+&lt;img src=assets/img/ref2.png style="width: 375px" /&gt;
+
+&lt;span class="footnote"&gt;Source: USGS&lt;/span&gt;
+
+
+---
+
+## Choropleth map
+
+&lt;img src=assets/img/texas1.png style="width: 450px" /&gt;
+
+&lt;span class="footnote"&gt;Source: _Texas Tribune_&lt;/span&gt;
+
+
+---
+
+## Graduated/proportional symbol
+
+&lt;img src=assets/img/sudan.png style="width: 650px" /&gt;
+
+---
+
+## Isopleth (isarithmic) maps
+
+&lt;img src=assets/img/iso.png style="width: 650px" /&gt;
+
+&lt;span class="footnote"&gt;Source: University of Illinois&lt;/span&gt;
+
+
+---
+
+## Flow maps
+
+&lt;img src=assets/img/facebook.png style="width: 750px" /&gt;
+
+&lt;span class="footnote"&gt;Source: Facebook&lt;/span&gt;
+
+
+---
+
+## Dot-density maps
+
+&lt;img src=assets/img/chicago.jpg style="width: 330px" /&gt;
+
+&lt;span class="footnote"&gt;Source: Radical Cartography&lt;/span&gt;
+
+
+---
+
+## Cartograms
+
+&lt;img src=assets/img/cartogram.png style="width: 675px" /&gt;
+
+&lt;span class="footnote"&gt;Source: http://www-personal.umich.edu/~mejn/election/2008/&lt;/span&gt;
+
+
+---
+
+## 3-D maps
+
+&lt;img src=assets/img/time.png style="width: 750px" /&gt;
+
+&lt;span class="footnote"&gt;Source: Time Magazine&lt;/span&gt;
+
+
+---
+
+## Navigational map
+
+&lt;img src=assets/img/nav.jpg style="width: 700px" /&gt;
+
+&lt;span class="footnote"&gt;Source: University of Texas at Austin&lt;/span&gt;
+
+
+---
+
+## Network map
+
+&lt;img src=assets/img/metro.png style="width: 400px" /&gt;
+
+&lt;span class="footnote"&gt;Source: Metropolitan Transportation Authority&lt;/span&gt;
+
+
+---
+
+## Designing a map: key considerations
+
+* What are you mapping? 
+
+* Who is your audience?
+
+* In what format will you be presenting the map?  
+
+---
+
+## Visual variables in cartography
+
+&lt;img src=assets/img/vis-var.PNG style="width: 500px" /&gt;
+
+---
+
+## Color selection
+
+* **Hue**: color, commonly understood (red, blue, green)
+* **Lightness** or **Value**: extent to which color is light or dark
+* **Saturation**: vividness of the color
+
+&lt;img src=assets/img/color1.png style="width: 400px" /&gt;
+
+&lt;span class="footnote"&gt;Image source: Wikipedia&lt;/span&gt;
+
+---
+
+## Color selection
+
+&lt;img src=assets/img/schemes.PNG style="width: 700px" /&gt;
+
+&lt;span class="footnote"&gt;Source: Brewer, *Designing Better Maps*&lt;/span&gt;
+
+
+---
+
+## Color selection
+
+* What does your color choice say to the map reader?  
+
+&lt;img src=assets/img/badmap.jpg style="width: 600px" /&gt;
+
+&lt;span class="footnote"&gt;Source: Brewer, *Designing Better Maps*&lt;/span&gt;
+
+
+---
+
+## Data classification
+
+&lt;img src=assets/img/dataclass.PNG style="width: 650px" /&gt;
+
+---
+
+## Data classification
+
+&lt;img src=assets/img/poverty.PNG style="width: 800px" /&gt;
+
+---
+
+## Layout and map elements
+
+&lt;img src=assets/img/layout.png style="width: 800px" /&gt;
+
+---
+
+## Visual hierarchy of map elements
+
+&lt;img src=assets/img/hierarchy.png style="width: 800px" /&gt;
+
+---
+
+## Cartography and the basemap
+
+&lt;img src=assets/img/basemap1.png style="width: 800px" /&gt;
+
+&lt;span class="footnote"&gt;Source: [Kenneth Field, *Cartonerd*](http://cartonerd.blogspot.com/2014/03/cart-oh-nono-1-blending-choropleths-and.html)&lt;/span&gt;
+
+---
+
+## Cartography and the basemap
+
+&lt;img src=assets/img/basemap2.png style="width: 800px" /&gt;
+
+&lt;span class="footnote"&gt;Source: [Kenneth Field, *Cartonerd*](http://cartonerd.blogspot.com/2014/03/cart-oh-nono-1-blending-choropleths-and.html)&lt;/span&gt;
+
+---
+
+## Map export and image resolution
+
+* Raster formats: bitmap (.bmp), Tagged Image File Format (TIFF, .tif), JPEG (.jpg)
+
+* Vector formats: encapsulated PostScript (.eps), Enhanced Metafile (.emf), Adobe Illustrator format (.ai)
+
+* Resolution: dots per inch (dpi)
+
+---
+
+## How to lie with maps
+
+* Given our discussion today (and earlier in the class), how might maps be misleading?  
+
+---
+
+## Maps and power
+
+&lt;img src=assets/img/redlining.jpg style="width: 600px" /&gt;
+
+&lt;span class="footnote"&gt;Source: Wikipedia&lt;/span&gt;
+
+
+---
+
+## Propaganda maps
+
+&lt;img src=assets/img/prop1.jpg style="width: 300px" /&gt;
+
+&lt;span class="footnote"&gt;Source: flowingdata.com&lt;/span&gt;
+
+
+---
+
+## Propaganda maps
+
+&lt;img src=assets/img/prop2.jpg style="width: 500px" /&gt;
+
+&lt;span class="footnote"&gt;Source: CIA via Ian Muelenhaus, UW-La Crosse&lt;/span&gt;
+
+---
+
+
+## Boundary disputes
+
+&lt;img src=assets/img/boundary.png style="width: 650px" /&gt;
+
+&lt;span class="footnote"&gt;Source: *The Economist*&lt;/span&gt;
+
+&lt;style&gt;
+
+h1, h2, h3 {
+  color:  #4d1979; 
+}
+
+a {
+  color: #8C489F; 
+}
+
+.inverse {
+  background-color:  #4d1979; 
+
+}
+&lt;/style&gt;
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
