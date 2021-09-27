@@ -1,0 +1,310 @@
+---
+title: "Scale and coordinate systems"
+subtitle: ""
+date: "September 28, 2021"
+author: "GEOG 30313"
+output: 
+  xaringan::moon_reader: 
+    seal: yes
+  
+---
+
+## Scale and coordinate systems
+
+* Modeling geographic phenomena requires __generalization__ and __distortion__!
+
+<img src=assets/img/generalize.png style="width: 800px">
+
+* As such, proper selection of __scale__ and __projection__ is of paramount importance
+
+---
+
+## Map scale
+
+* Relationship of features on a map to those features on the Earth's surface
+Scale bar: 
+
+<img src=assets/img/scale-bar.png style="width: 800px">
+
+* Representative fraction: 1:24,000
+* Statement scale: one inch = one mile
+
+---
+
+## "Small-scale" vs. "large-scale"
+
+<img src=assets/img/small-large.png style="width: 800px">
+
+---
+
+## Scale and generalization
+
+Purple: NHGIS States feature class
+Green: Esri World feature class
+
+<img src=assets/img/long-island.png style="width: 800px">
+
+---
+
+## The Modifiable Areal Unit Problem (MAUP)
+
+<img src=assets/img/maup.png style="width: 800px">
+
+---
+
+## Data aggregation and data analysis
+
+The "ecological fallacy"
+
+<img src=assets/img/fallacy.png style="width: 800px">
+
+---
+
+## Coordinates: the basics
+
+<img src=assets/img/coordinates.png style="width: 800px">
+
+---
+
+## Geographic coordinates
+
+* Longitude (X) and latitude (Y) coordinates can be expressed as:
+  + Degrees minutes seconds (e.g. $97^{\circ}21'37''W$, $32^{\circ}42'38''N$)
+  + Decimal degrees (e.g. $-97.36$, $32.71$)
+
+Conversion between DMS and decimal degrees:
+
+$$DD = D + \frac{M}{60} + \frac{S}{3600}$$
+
+---
+
+## The __graticule__
+
+<img src=assets/img/graticule.png style="width: 800px">
+
+---
+
+## The __geoid__
+
+* __Geodesy__: the science of measuring the Earth's surface
+* __Geoid__: the _equipotential_ surface of the Earth
+
+<img src=assets/img/geoid.jpg style="width: 400px">
+
+---
+
+## The reference ellipsoid (spheroid)
+
+* Used by geodesists to estimate the general shape of the Earth
+* Common ellipsoids: Clarke 1866, GRS 1980, WGS84
+
+<img src=assets/img/ellipsoid.png style="width: 400px">
+
+---
+
+## Datums
+
+* __Datum__: a reference surface for making positional measurements on the Earth
+
+* Based on a reference ellipsoid
+
+* _Horizontal datums_ and _vertical datums_
+
+* Common datums: North American Datum of 1983 (NAD83), World Geodetic System of 1984 (WGS84)
+
+---
+
+## Coordinate systems
+
+* __Geographic coordinate system__: coordinate system based on latitude and longitude (coordinates on a sphere)
+* __Projected coordinate system__: coordinate system projected onto a two-dimensional surface (coordinates on a plane)
+
+Components of coordinate systems: 
+* Measurement framework (geographic or planimetric)
+* Units of measurement
+* Map projection definition (for projected coordinate systems)
+* Other info: reference ellipsoid, datum, standard parallels, central meridian, x/y shifts
+
+---
+
+## Developable surfaces
+
+<img src=assets/img/surfaces.png style="width: 800px">
+
+---
+
+## Projection types
+
+<img src=assets/img/types.png style="width: 800px">
+
+---
+
+## Standard parallels and distortion
+
+<img src=assets/img/distortion.png style="width: 800px">
+
+---
+
+## Tangent: cylindrical
+
+<img src=assets/img/tangent.jpg style="width: 800px">
+
+---
+
+## Secant: conic
+
+<img src=assets/img/secant.gif style="width: 800px">
+
+---
+
+## Projections and distortion
+
+Projections can preserve one of the following properties and distort the other three:
+
+* __Area__ (equal-area projections)
+* __Distance__ (equidistant projections)
+* __Shape/angles__ (conformal projections)
+* __Direction__ (azimuthal projections)
+
+---
+
+## Mercator
+
+<img src=assets/img/mercator.jpg style="width: 650px">
+
+<span class="footnote">Source: davidrumsey.com</span>
+
+---
+
+## Great circles and rhumb lines
+
+<img src=assets/img/rhumb.png style="width: 800px">
+
+<span class="footnote">Source: CSDE, Univ. of Washington</span>
+
+---
+
+## Gall-Peters
+
+<img src=assets/img/peters.jpg style="width: 800px">
+
+<span class="footnote">Source: skyscrapercity.com</span>
+
+---
+
+## Winkel-Tripel (compromise projection)
+
+<img src=assets/img/winkel.jpg style="width: 800px">
+
+<span class="footnote">Source: Wikimedia Commons</span>
+
+---
+
+## Projections
+
+* https://bl.ocks.org/mbostock/3711652
+
+---
+class: inverse, center, middle
+
+# Demo: Projections in ArcGIS Pro
+
+---
+
+## Hobo-Dyer equal-area
+
+<img src=assets/img/hobo-dyer.jpg style="width: 800px">
+
+<span class="footnote">Source: flourish.org</span>
+
+---
+
+## Why do projections matter?
+
+<iframe width="800" height="500" src="https://www.youtube.com/embed/OH1bZ0F3zVU" frameborder="0" allowfullscreen></iframe>
+
+---
+
+## Tissot's indicatrix (Mercator)
+
+<img src=assets/img/tissot1.jpg style="width: 650px">
+
+---
+
+## Tissot's indicatrix (Winkel-Tripel)
+
+<img src=assets/img/tissot2.jpg style="width: 650px">
+
+---
+
+## Universal Transverse Mercator (UTM)
+
+<img src=assets/img/utm1.png style="width: 700px">
+
+---
+
+## Universal Transverse Mercator (UTM)
+
+<img src=assets/img/utm2.png style="width: 700px">
+
+---
+
+## State Plane
+
+<img src=assets/img/state-plane.png style="width: 700px">
+
+---
+
+## Public Land Survey System (PLSS)
+
+<img src=assets/img/plss.png style="width: 800px">
+
+---
+
+## EPSG codes and projection standards
+
+* [SpatialReference.org](http://www.spatialreference.org/)
+
+
+
+
+
+
+
+<style>
+
+h1, h2, h3 {
+  color:  #4d1979; 
+}
+
+a {
+  color: #8C489F; 
+}
+
+.inverse {
+  background-color:  #4d1979; 
+
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
