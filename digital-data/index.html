@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Creating digital data</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="GEOG 30313" />
+    <meta name="date" content="2021-10-19" />
+    <script src="index_files/header-attrs-2.10.5/header-attrs.js"></script>
+    <link href="index_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="index_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Creating digital data
+### GEOG 30313
+### October 19, 2021
+
+---
+
+
+## Locational data
+
+* Geographic information: __locational information__ and attribute information
+
+* Central question: how do we locate features on the Earth's surface?  
+
+---
+
+## Digitizing 
+
+* __Digitizing__ (from your textbook): "the process by which coordinates from a map, image, or other sources are converted into a digital format in a GIS."
+
+* Types of digitizing: 
+ + Manual: "heads-up" and "heads-down" digitizing
+ + Automated: scanning, vectorization
+
+
+
+---
+
+## "Heads-up" digitizing
+
+* Your textbook calls it _on-screen digitizing_
+
+&lt;img src=assets/img/headsup.jpg style="width: 600px"&gt;
+
+---
+
+## "Heads-down" digitizing
+
+* Use of a tablet, or "puck," to trace features on a paper map
+
+&lt;img src=assets/img/headsdown.jpg style="width: 550px"&gt;
+
+---
+
+## Snapping and tolerance
+
+&lt;img src=assets/img/snapping.gif style="width: 800px"&gt;
+
+---
+
+## Georeferencing
+
+* In order to work properly with newly-digitized data, the data must be aligned to a __coordinate system__
+
+* This requires coordinate transformation through ___georeferencing___
+
+---
+
+## Coordinate transformation
+
+&lt;img src=assets/img/transform.gif style="width: 800px"&gt;
+
+---
+
+## Control points and RMSE
+
+* __Affine transformation__: linear equation used for coordinate transformation
+
+* __Root mean square error (RMSE)__: measurement of error in georeferencing
+
+&lt;img src=assets/img/ctrl.jpg style="width: 400px"&gt;
+
+---
+
+## Surveying
+
+* __Surveying__: field collection of locational information using both direct and indirect measurements
+
+* Basic techniques: location determined based on __distance__ and __angles__
+
+---
+
+## Control points (datum)
+
+* Datum locations based on previously-surveyed __control points__
+
+&lt;img src=assets/img/control-points.PNG style="width: 800px"&gt;
+
+---
+
+## Triangulation
+
+&lt;img src=assets/img/triangulation.PNG style="width: 800px"&gt;
+
+&lt;span class="footnote"&gt;Source: DiBiase, D., _The Nature of Geographic Information_&lt;/span&gt;
+
+---
+
+## Trilateration
+
+* Determination of point location based on __distance only__
+
+* Interactive example: Locating unknown point C, which is 9400m from measured point A and 7000m from measured point B
+
+* Next: locate unknown point D, which is 9600m from point A and 8000m from point C
+
+* Exercise source: DiBiase, D., _The Nature of Geographic Information_
+
+---
+
+## Global Navigation Satellite Systems (GNSS)
+
+* NAVSTAR: United States system
+ + Commonly referred to as the Global Positioning System (GPS)
+ 
+* GLONASS: Russian system
+
+* Other systems: 
+ + Galileo: EU system
+ + Beidou: Chinese system
+ 
+
+
+---
+
+## NAVSTAR GPS
+
+* Satellite system launched by the US Department of Defense
+
+* 31 satellites currently in orbit
+
+* At least four satellites should be in view of every point on the Earth's surface at all times; often, 8-12 are in view
+
+* Controlled by set of control stations (master station in Colorado)
+
+---
+
+## GNSS positioning: range distances
+
+* __Range distance__: distance between satellite in space and GPS receiver
+
+* Range is equal to __the speed of light * the time of signal transmission__
+
+&lt;img src=assets/img/range.gif style="width: 400px"&gt;
+
+---
+
+## Trilateration and GNSS
+
+&lt;img src=assets/img/tri-gnss.gif style="width: 550px"&gt;
+
+---
+
+## Precision and accuracy
+
+&lt;img src=assets/img/precision.gif style="width: 500px"&gt;
+
+---
+
+## GPS: other issues
+
+* GPS satellites use the __WGS 1984__ datum
+
+* Sources of error: 
+ + Atmospheric interference
+ + Imprecise receiver clocks
+ + Satellite position (e.g. satellites clustered together)
+ 
+&lt;img src=assets/img/pdop.gif style="width: 600px"&gt;
+
+---
+
+## Differential correction
+
+* Error measured at a nearby __base station__; correction applied to GPS receiver
+
+&lt;img src=assets/img/diff.gif style="width: 800px"&gt;
+
+&lt;style&gt;
+
+h1, h2, h3 {
+  color:  #4d1979; 
+}
+
+a {
+  color: #8C489F; 
+}
+
+.inverse {
+  background-color:  #4d1979; 
+
+}
+&lt;/style&gt;
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

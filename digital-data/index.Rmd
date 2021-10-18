@@ -1,0 +1,201 @@
+---
+title: "Creating digital data"
+subtitle: ""
+date: "October 19, 2021"
+author: "GEOG 30313"
+output: 
+  xaringan::moon_reader: 
+    seal: yes
+  
+---
+
+## Locational data
+
+* Geographic information: __locational information__ and attribute information
+
+* Central question: how do we locate features on the Earth's surface?  
+
+---
+
+## Digitizing 
+
+* __Digitizing__ (from your textbook): "the process by which coordinates from a map, image, or other sources are converted into a digital format in a GIS."
+
+* Types of digitizing: 
+ + Manual: "heads-up" and "heads-down" digitizing
+ + Automated: scanning, vectorization
+
+
+
+---
+
+## "Heads-up" digitizing
+
+* Your textbook calls it _on-screen digitizing_
+
+<img src=assets/img/headsup.jpg style="width: 600px">
+
+---
+
+## "Heads-down" digitizing
+
+* Use of a tablet, or "puck," to trace features on a paper map
+
+<img src=assets/img/headsdown.jpg style="width: 550px">
+
+---
+
+## Snapping and tolerance
+
+<img src=assets/img/snapping.gif style="width: 800px">
+
+---
+
+## Georeferencing
+
+* In order to work properly with newly-digitized data, the data must be aligned to a __coordinate system__
+
+* This requires coordinate transformation through ___georeferencing___
+
+---
+
+## Coordinate transformation
+
+<img src=assets/img/transform.gif style="width: 800px">
+
+---
+
+## Control points and RMSE
+
+* __Affine transformation__: linear equation used for coordinate transformation
+
+* __Root mean square error (RMSE)__: measurement of error in georeferencing
+
+<img src=assets/img/ctrl.jpg style="width: 400px">
+
+---
+
+## Surveying
+
+* __Surveying__: field collection of locational information using both direct and indirect measurements
+
+* Basic techniques: location determined based on __distance__ and __angles__
+
+---
+
+## Control points (datum)
+
+* Datum locations based on previously-surveyed __control points__
+
+<img src=assets/img/control-points.PNG style="width: 800px">
+
+---
+
+## Triangulation
+
+<img src=assets/img/triangulation.PNG style="width: 800px">
+
+<span class="footnote">Source: DiBiase, D., _The Nature of Geographic Information_</span>
+
+---
+
+## Trilateration
+
+* Determination of point location based on __distance only__
+
+* Interactive example: Locating unknown point C, which is 9400m from measured point A and 7000m from measured point B
+
+* Next: locate unknown point D, which is 9600m from point A and 8000m from point C
+
+* Exercise source: DiBiase, D., _The Nature of Geographic Information_
+
+---
+
+## Global Navigation Satellite Systems (GNSS)
+
+* NAVSTAR: United States system
+ + Commonly referred to as the Global Positioning System (GPS)
+ 
+* GLONASS: Russian system
+
+* Other systems: 
+ + Galileo: EU system
+ + Beidou: Chinese system
+ 
+
+
+---
+
+## NAVSTAR GPS
+
+* Satellite system launched by the US Department of Defense
+
+* 31 satellites currently in orbit
+
+* At least four satellites should be in view of every point on the Earth's surface at all times; often, 8-12 are in view
+
+* Controlled by set of control stations (master station in Colorado)
+
+---
+
+## GNSS positioning: range distances
+
+* __Range distance__: distance between satellite in space and GPS receiver
+
+* Range is equal to __the speed of light * the time of signal transmission__
+
+<img src=assets/img/range.gif style="width: 400px">
+
+---
+
+## Trilateration and GNSS
+
+<img src=assets/img/tri-gnss.gif style="width: 550px">
+
+---
+
+## Precision and accuracy
+
+<img src=assets/img/precision.gif style="width: 500px">
+
+---
+
+## GPS: other issues
+
+* GPS satellites use the __WGS 1984__ datum
+
+* Sources of error: 
+ + Atmospheric interference
+ + Imprecise receiver clocks
+ + Satellite position (e.g. satellites clustered together)
+ 
+<img src=assets/img/pdop.gif style="width: 600px">
+
+---
+
+## Differential correction
+
+* Error measured at a nearby __base station__; correction applied to GPS receiver
+
+<img src=assets/img/diff.gif style="width: 800px">
+
+<style>
+
+h1, h2, h3 {
+  color:  #4d1979; 
+}
+
+a {
+  color: #8C489F; 
+}
+
+.inverse {
+  background-color:  #4d1979; 
+
+}
+</style>
+
+
+
+
+
