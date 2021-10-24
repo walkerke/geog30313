@@ -1,0 +1,221 @@
+---
+title: "Map overlay and geoprocessing"
+subtitle: ""
+date: "October 26, 2021"
+author: "GEOG 30313"
+output: 
+  xaringan::moon_reader: 
+    seal: yes
+  
+---
+
+## Spatial data analysis
+
+* The study of data using their __spatial__ or __geographic__ properties
+
+* What might be some examples of spatial data analysis?  
+
+---
+
+## Spatial analysis
+
+<img src=assets/img/snow.png style="width: 800px">
+
+---
+
+## Spatial operations
+
+<img src=assets/img/spatialops.gif style="width: 800px">
+
+---
+
+## Spatial operations
+
+<img src=assets/img/ops2.png style="width: 800px">
+
+---
+
+## Adjacency
+
+<img src=assets/img/adjacency.jpg style="width: 700px">
+
+---
+
+## Proximity
+
+<img src=assets/img/proximity.jpg style="width: 700px">
+
+---
+
+## Spatial queries: adjacency
+
+<img src=assets/img/adj2.png style="width: 800px">
+
+---
+
+## Spatial queries: containment
+
+<img src=assets/img/contain.gif style="width: 800px">
+
+---
+
+## Map overlay
+
+<img src=assets/img/overlay.gif style="width: 800px">
+
+---
+
+## The "point-in-polygon" problem
+
+<img src=assets/img/p-in-p.png style="width: 800px">
+
+---
+
+## Map overlay and spatial queries
+
+* Example: Which elementary schools in Fort Worth are in the most impoverished neighborhoods?
+
+---
+
+## Spatial joins
+
+* Attributes joined from one layer to another based on _location_
+
+---
+
+## Geoprocessing
+
+* Definition (adapted from ESRI): the execution of operations on spatial data __to create new information__; __to enhance its spatial structure__; or __to analyze interrelationships between existing information__.  
+
+* In short: involves the manipulation of geographic data for the purposes of data management and data analysis
+
+---
+
+## Clip
+
+* Creates a new layer from an input layer using a second layer as a "cookie cutter."  
+
+<img src=assets/img/clip.png style="width: 800px">
+
+---
+
+## Intersect
+
+* Creates a new layer that is a geometric intersection of the input layers
+
+<img src=assets/img/intersect.png style="width: 800px">
+
+---
+
+## Union
+
+* Data from input layers combined to create output layers
+
+<img src=assets/img/union.png style="width: 800px">
+
+---
+
+## Merge
+
+* Combines two datasets into a single output dataset
+
+<img src=assets/img/merge.png style="width: 800px">
+
+---
+
+## Other examples
+
+* Erase
+* Identity
+* Symmetrical difference
+* Update
+
+Not all geoprocessing tasks available at all license levels of ArcGIS
+
+---
+
+## Sliver polygons
+
+<img src=assets/img/slivers.jpg style="width: 800px">
+
+---
+
+## Dissolve
+
+* Used to combine features with shared attribute(s)
+
+<img src=assets/img/dissolve.gif style="width: 500px">
+
+---
+
+## Buffering
+
+* A __buffer__ is a feature that delineates the area within a given distance of an input feature 
+
+<img src=assets/img/buffer.gif style="width: 700px">
+
+---
+
+## Buffering, continued
+
+<img src=assets/img/buffer2.png style="width: 800px">
+
+---
+
+## Applications of spatial analysis
+
+<img src=assets/img/chisholm.png style="width: 700px">
+
+---
+
+## Applications of spatial analysis
+
+* How would you use spatial analysis to solve the following problem? 
+
+* Think of the different operations and tool(s) that would be a part of your solution
+
+---
+
+## Scenario
+
+<img src=assets/img/scenario.png style="width: 650px">
+
+
+<style>
+
+h1, h2, h3 {
+  color:  #4d1979; 
+}
+
+a {
+  color: #8C489F; 
+}
+
+.inverse {
+  background-color:  #4d1979; 
+
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
