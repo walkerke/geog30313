@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Geocoding</title>
+    <meta charset="utf-8">
+    <meta name="author" content="GEOG 30313" />
+    <meta name="date" content="2018-11-27" />
+    <link href="index_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="index_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Geocoding
+### GEOG 30313
+### November 27, 2018
+
+---
+
+
+## Geocoding
+
+* Process of transforming a _description of a location_ to coordinates on the Earth's surface
+
+&lt;img src=assets/img/geo1.png style="width: 800px"&gt;
+
+---
+
+## Geocoding
+
+* __Locational description__ matched to a reference dataset
+
+* Types of geographic references:
+ + Street centerlines
+ + Parcel data
+ + Composite locators
+ 
+---
+
+## Street centerlines
+
+&lt;img src=assets/img/centerlines.png style="width: 800px"&gt;
+
+---
+
+## Street centerlines
+
+&lt;img src=assets/img/centerlines2.png style="width: 800px"&gt;
+
+---
+
+## Parcel data
+
+&lt;img src=assets/img/parcel.png style="width: 800px"&gt;
+
+---
+
+## Building an address locator
+
+&lt;img src=assets/img/locator.png style="width: 700px"&gt;
+
+---
+
+## Geocoding services
+
+* ArcGIS Online: composite locator available through ArcGIS for Desktop w/organizational subscription; 40 "credits" per 1000 addresses
+
+* Google: Limit of 2500 addresses/day without subscription
+
+* Others: Bing, Yahoo, many more.
+
+---
+
+## Demo: Geocoding in ArcGIS Pro
+
+* Dataset: http://personal.tcu.edu/kylewalker/data/txwaffle.csv
+
+---
+
+## Which geocoder to use?
+
+&lt;img src=assets/img/which.png style="width: 800px"&gt;
+
+---
+
+## Geocoding error
+
+&lt;img src=assets/img/error.png style="width: 800px"&gt;
+
+
+&lt;style&gt;
+
+h1, h2, h3 {
+  color:  #4d1979; 
+}
+
+a {
+  color: #8C489F; 
+}
+
+.inverse {
+  background-color:  #4d1979; 
+
+}
+&lt;/style&gt;
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

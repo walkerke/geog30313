@@ -1,0 +1,77 @@
+---
+title: "GIS ethics"
+subtitle: ""
+date: "December 4, 2018"
+author: "GEOG 30313"
+output: powerpoint_presentation
+  
+---
+
+## GPS tracking and location-based services
+
+* Article link: https://www.theverge.com/2016/11/30/13763714/uber-location-data-tracking-app-privacy-ios-android
+
+---
+
+## Geodemographic segmentation
+
+* Esri's Tapestry segmentation: http://www.arcgis.com/home/webmap/viewer.html?webmap=4778fee6371d4e83a22786029f30c7e1
+
+---
+
+## Questions for discussion
+
+* What do we risk when representing people digitally?
+
+* Does the use of GIS/GPS technologies represent an infringement upon personal privacy?
+
+
+---
+
+## Ethics in GIS
+
+* What does "ethics" mean to you?
+
+* What does it mean to be an "ethical" GIS professional?
+
+---
+
+## GIS code of ethics
+
+* [Code of Ethics available here](http://www.gisci.org/ethics/codeofethics.aspx)
+
+Includes:
+* Obligations to society
+* Obligations to employers and funders
+* Obligations to colleagues and the profession
+* Obligations to individuals in society
+
+---
+
+## Ethical scenarios
+
+* Group 1: [read this linked document](https://www.e-education.psu.edu/sites/default/files/ethics/environmental_justice_case.pdf)
+
+* Group 2: [read this linked document](https://www.e-education.psu.edu/sites/default/files/ethics/mapping_muslim_neighbors_case.pdf)
+
+Discuss in groups: what is an "ethical" response to these situations?
+
+
+<style>
+
+h1, h2, h3 {
+  color:  #4d1979; 
+}
+
+a {
+  color: #8C489F; 
+}
+
+.inverse {
+  background-color:  #4d1979; 
+
+}
+</style>
+
+
+

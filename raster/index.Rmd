@@ -1,0 +1,266 @@
+---
+title: "Raster data analysis"
+subtitle: ""
+date: "November 4, 2021"
+author: "GEOG 30313"
+output: 
+  xaringan::moon_reader: 
+    seal: yes
+  
+---
+
+## Review: the raster data model
+
+* What do you remember about raster data? 
+
+* What would raster data be used to represent in a GIS?  
+
+---
+
+## Raster data
+
+* Grid of cells that form a continuous surface
+
+* Each grid cell contains a value that represents some real-world phenomena (e.g. elevation, land use)
+
+<img src=assets/img/raster.png style="width: 750px">
+
+---
+
+## **Quantitative** and **qualitative** rasters
+
+<img src=assets/img/qualquant.png style="width: 850px">
+
+---
+
+## Raster data resolution
+
+* **Cell dimension**: the size of each grid cell (e.g. 30 meters by 30 meters)
+
+* **Resolution**: the relative size of the grid cell
+
+<img src=assets/img/resolution.png style="width: 850px">
+
+---
+
+## Types of raster data
+
+* ArcGIS and other GIS packages can handle a variety of raster formats, including:
+  + Image files (JPEG, TIFF, BMP, PNG, etc.)
+  + Geo-enhanced image files (GeoTIFF, GeoJPEG)
+  + ESRI GRID, ESRI ASCII GRID
+  + Remotely sensed imagery (e.g. ERDAS Imagine .img files)
+  + Many more.
+  
+  
+
+
+---
+
+## Raster data and cell sizes
+
+<img src=assets/img/cellsize.PNG style="width: 850px">
+
+---
+
+## Raster resampling
+
+<img src=assets/img/resampling.PNG style="width: 850px">
+
+---
+
+## Types of raster functions
+
+<img src=assets/img/functions.PNG style="width: 800px">
+
+---
+
+## Map algebra
+
+* The cell-by-cell combination of raster layers
+
+<img src=assets/img/algebra.gif style="width: 600px">
+
+---
+
+## Raster overlay
+
+<img src=assets/img/overlay.gif style="width: 800px">
+
+---
+
+## Raster overlay
+
+* Important to consider meaning of raster addition when using it to do raster overlay
+
+<img src=assets/img/overlay2.gif style="width: 800px">
+
+---
+
+## Boolean raster
+
+* Raster that represents whether a logical operation is true or false; e.g., the presence or absence of some condition
+
+* True commonly represented as 1; false as 0
+
+---
+
+## Boolean overlay
+
+<img src=assets/img/boolean.gif style="width: 525px">
+
+---
+
+## Boolean overlay
+
+<img src=assets/img/boolean2.PNG style="width: 800px">
+
+---
+
+## What would the output be?  
+
+<img src=assets/img/output.PNG style="width: 850px">
+
+---
+
+## Reclassification
+
+<img src=assets/img/reclass.gif style="width: 800px">
+
+---
+
+## Raster "clip"
+
+<img src=assets/img/clip.jpg style="width: 650px">
+
+---
+
+## Neighborhood functions
+
+<img src=assets/img/nhood.PNG style="width: 850px">
+
+---
+
+## Neighborhood functions
+
+<img src=assets/img/nhood2.gif style="width: 450px">
+
+---
+
+## Zonal functions
+
+* Operations based on pre-defined "zones" within a given area
+
+<img src=assets/img/zonal.jpg style="width: 750px">
+
+---
+
+## Distance functions
+
+<img src=assets/img/distance.PNG style="width: 850px">
+
+---
+
+## Raster buffers
+
+<img src=assets/img/buffers.png style="width: 750px">
+
+---
+
+## Density/"hot-spot" mapping
+
+<img src=assets/img/density.png style="width: 700px">
+
+---
+
+## Interpolation
+
+* Creation of continuous raster surface from input points
+
+* Example: Elevation
+
+<img src=assets/img/interpolation.png style="width: 850px">
+
+---
+
+## Digital Elevation Models (DEMs)
+
+* Raster representation of a terrain's (commonly the Earth's) surface
+
+<img src=assets/img/dem.png style="width: 850px">
+
+---
+
+## Terrain modeling
+
+<img src=assets/img/terrain.PNG style="width: 850px">
+
+---
+
+## Surface analysis
+
+<img src=assets/img/surface.PNG style="width: 850px">
+
+---
+
+## Viewshed analysis
+
+<img src=assets/img/viewshed.jpg style="width: 850px">
+
+---
+
+## The Spatial Analyst extension
+
+<img src=assets/img/sa.PNG style="width: 600px">
+
+
+<style>
+
+h1, h2, h3 {
+  color:  #4d1979; 
+}
+
+a {
+  color: #8C489F; 
+}
+
+.inverse {
+  background-color:  #4d1979; 
+
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

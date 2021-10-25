@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GIS on the Internet</title>
+    <meta charset="utf-8">
+    <meta name="author" content="GEOG 30313" />
+    <meta name="date" content="2018-11-13" />
+    <link href="index_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="index_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# GIS on the Internet
+### GEOG 30313
+### November 13, 2018
+
+---
+
+
+## Interactive mapping
+
+* [NYT college football fan map](http://www.nytimes.com/interactive/2014/10/03/upshot/ncaa-football-map.html)
+
+* For discussion: 
+ + What is 'interactive' about this map?  
+ + How does this map differ from a static map?  Is it better?  
+ 
+
+
+---
+
+## Web 2.0 and geographic information
+
+* __Web 2.0__: emphasis on user-generated content and the web as a platform
+
+* Internet content not simply top-down, but highly interactive
+
+* Demand for applications that allow users to interact with (and create their own!) geographic data
+
+---
+
+## Examples of Web 2.0
+
+* [Google Maps](http://maps.google.com)
+
+* [OpenStreetMap](http://www.openstreetmap.org/#map=5/51.500/-0.100)
+
+* [Mapping Twitter data](http://srogers.cartodb.com/viz/98cb3c42-4d7b-11e4-b811-0e4fddd5de28/embed_map)
+
+---
+
+## Web maps vs. GIS
+
+* For discussion: can an internet mapping application be considered a GIS?  
+
+---
+
+## Web GIS
+
+* Designed to simulate desktop GIS experience in a browser or on a mobile device
+
+* However, whereas a desktop GIS is geared toward a trained user (you all!), internet GIS applications should be designed for the average Internet user
+
+---
+
+## Client/server architecture
+
+* **Web server** hosts and serves sites and data to be consumed by **web clients** (e.g. your browser)
+
+&lt;img src=assets/img/client-server.jpg style="width: 700px" /&gt;
+
+&lt;span class="footnote"&gt;Source: Fu and Sun (2011)&lt;/span&gt;
+
+---
+
+## The distributed GIS process
+
+&lt;img src=assets/img/web-gis.jpg style="width: 700px" /&gt;
+
+&lt;span class="footnote"&gt;Source: Fu and Sun (2011)&lt;/span&gt;
+
+---
+
+## GIS servers
+
+* Server: machine that hosts and "serves" GIS services to clients
+
+* GIS server software: ArcGIS for Server, GeoServer, MapServer (open source)
+
+&lt;img src=assets/img/gis-server.jpg style="width: 700px" /&gt;
+
+&lt;span class="footnote"&gt;Source: Fu and Sun (2011)&lt;/span&gt;
+
+---
+
+## Geospatial web services
+
+* **Map services**: geospatial data (maps) serves as images (e.g. JPEG, PNG)
+
+ * **Tiled map service**: maps generated from pre-made "tiles" stored in server's cache
+ 
+* **Feature services**: geospatial data served as vectors
+ * Allow users to create, edit, delete, and query data
+
+
+---
+
+## Tiled mapping
+
+* To speed browsing, web maps often display map services as "tiles"
+
+* Tiles are defined by their **zoom level** and **coordinates**
+
+---
+
+## How tiled mapping systems work
+
+&lt;img src=assets/img/tiled-mapping.png style="width: 700px" /&gt;
+
+&lt;span class="footnote"&gt;Source: Bing Maps&lt;/span&gt;
+
+---
+
+## The Web Mercator coordinate system
+
+* Web mapping systems commonly use a variant of the Mercator projection
+
+* Mercator used because of its **conformal** and **cylindrical** properties
+
+---
+
+## Web map design
+
+* Principles of web map design: 
+ * Generalization
+ * Scalability
+ * Minimalism
+
+---
+
+## Generalization
+
+* Important to consider purpose of your map when selecting resolution of your data
+
+&lt;img src=assets/img/general.png style="width: 800px"&gt;
+
+
+---
+
+## Generalization
+
+* At small scales, lots of detail can be unnecessary and computationally burdensome 
+
+* Large feature services can be very slow in web maps
+
+* When building applications, ask yourself: how much detail do I need?
+
+* In ArcGIS: look for the "Generalization" toolset in the "Cartography" toolbox
+
+---
+
+## Scalability
+
+Example: [Educational Attainment in America](http://personal.tcu.edu/kylewalker/maps/education)
+
+---
+
+## Minimalism (when appropriate)
+
+&lt;img src=assets/img/clutter.png style="width: 800px"&gt;
+
+---
+
+## Minimalist solution
+
+&lt;iframe width="800" height="500" src="xs_customers2.html" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+---
+
+## Principles of public-facing interfaces
+
+From Brian Timoney - web maps should be:
+
+* Fast
+* Intuitive
+* Informative
+* Fast
+
+[More from Brian Timoney on why map portals don't work](http://mapbrief.com/2013/02/05/why-map-portals-dont-work-part-i/)
+
+---
+
+## Cloud computing
+
+* Computing services that are served remotely over a network; not on an in-house physical server
+
+* Types: 
+ * Infrastructure as a Service (IaaS)
+ * Platform as a Service (PaaS)
+ * Software as a Service (Saas)
+
+
+---
+
+## Cloud computing
+
+* Benefits: 
+ * Pay-as-you-go model
+ * Less need to maintain/replace server hardware
+ * Efficiency (less power, air conditioning, space, etc.)
+ 
+* Drawbacks: 
+ * Privacy concerns
+ * Vendor constraints
+
+---
+
+## Examples of cloud computing
+
+&lt;img src=assets/img/cloud.png style="width: 700px" /&gt;
+
+---
+
+## ArcGIS Online
+
+* Subscription-based service; links with ArcGIS suite of products
+
+* Hosts data as tiled or feature services
+
+* Limitations: 
+ * Can only display a maximum of 1000 features
+ * Confusing pricing structure
+ 
+* Link: http://www.arcgis.com
+
+---
+
+## Tutorial: ArcGIS Online
+
+* Hundreds of World Regional Geography students at TCU have learned to make web maps with ArcGIS Online
+
+* Let's check it out!
+
+---
+
+## CARTO
+
+* Spatial database in the cloud
+
+* Free accounts for students; enterprise plans tailored toward businesses
+
+* Powerful interface for running queries, visualizing your data; dashboard capabilities
+
+* Link: http://www.carto.com
+
+---
+
+## Mapbox/Mapbox Studio
+
+* Mapbox Studio: Interactive design tool for web cartography; generates _vector tiles_
+
+* 'Freemium' service; will store certain amount of data for free, costs money for more storage
+
+* Link: http://www.mapbox.com
+
+&lt;style&gt;
+
+h1, h2, h3 {
+  color:  #4d1979; 
+}
+
+a {
+  color: #8C489F; 
+}
+
+.inverse {
+  background-color:  #4d1979; 
+
+}
+&lt;/style&gt;
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
