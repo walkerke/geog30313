@@ -1,7 +1,7 @@
 ---
 title: "Raster data analysis"
 subtitle: ""
-date: "November 4, 2021"
+date: "November 2, 2021"
 author: "GEOG 30313"
 output: 
   xaringan::moon_reader: 

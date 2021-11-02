@@ -1,9 +1,11 @@
 ---
 title: "Geocoding"
 subtitle: ""
-date: "November 27, 2018"
+date: "November 30, 2021"
 author: "GEOG 30313"
-output: powerpoint_presentation
+output: 
+  xaringan::moon_reader: 
+    seal: yes
   
 ---
 
