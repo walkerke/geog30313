@@ -58,7 +58,7 @@ output:
 
 * **Web server** hosts and serves sites and data to be consumed by **web clients** (e.g. your browser)
 
-<img src=assets/img/client-server.jpg style="width: 700px" />
+<img src=assets/img/client_server.jpg style="width: 700px">
 
 <span class="footnote">Source: Fu and Sun (2011)</span>
 
@@ -133,7 +133,7 @@ output:
 
 * Important to consider purpose of your map when selecting resolution of your data
 
-<img src=assets/img/general.png style="width: 800px">
+<img src=assets/img/generalize.png style="width: 800px">
 
 
 ---
