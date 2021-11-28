@@ -1,5 +1,5 @@
 ---
-title: "Geocoding"
+title: "Geocoding and GIS modeling"
 subtitle: ""
 date: "November 30, 2021"
 author: "GEOG 30313"
@@ -77,6 +77,73 @@ output:
 ## Geocoding error
 
 <img src=assets/img/error.png style="width: 800px">
+
+---
+
+## GIS modeling
+
+* Some sort of description or process of spatial phenomena
+
+* Types: 
+ + Simple spatial models
+ + Cartographic models
+
+
+
+---
+
+## Simple spatial models
+
+<img src=assets/img/simple.png style="width: 800px">
+
+---
+
+## Cartographic modeling
+
+<img src=assets/img/suitability.gif style="width: 800px">
+
+---
+
+## Suitability analysis
+
+<img src=assets/img/suitability.png style="width: 800px">
+
+---
+
+## Weighted overlay
+
+* Assignment of ranks, or weights, to inputs based on their relative importance to the model
+
+<img src=assets/img/weighted.gif style="width: 500px">
+
+---
+
+## Cellular automata models
+
+<img src=assets/img/cellular.png style="width: 800px">
+
+---
+
+## Agent-based models
+
+* "Agents" move around a digital landscape based on a set of rules or environmental factors
+
+* Used to simulate crowd behavior, animal behavior, transportation networks
+
+* [Example: research from Dr. Paul Torrens, NYU](http://www.geosimulation.org/stampede.htm)
+
+---
+
+## ArcGIS ModelBuilder
+
+* Graphical interface for building geoprocessing models
+
+* Can be configured as "tools" for future use, or exported as scripts
+
+---
+class: center, middle, inverse
+
+# Demo: ArcGIS ModelBuilder
 
 
 <style>
