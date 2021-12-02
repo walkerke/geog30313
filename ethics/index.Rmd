@@ -1,7 +1,7 @@
 ---
 title: "GIS ethics"
 subtitle: ""
-date: "December 4, 2018"
+date: "December 7, 2021"
 author: "GEOG 30313"
 output: 
   xaringan::moon_reader: 
@@ -17,7 +17,7 @@ output:
 
 ## Geodemographic segmentation
 
-* Esri's Tapestry segmentation: http://www.arcgis.com/home/webmap/viewer.html?webmap=4778fee6371d4e83a22786029f30c7e1
+* Esri's Tapestry segmentation: https://tcugis.maps.arcgis.com/apps/mapviewer/index.html?webmap=7839dee4db4444b5ae1ae47dda55ff92
 
 ---
 
